@@ -2,17 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Static Site</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An original retro 3D browser shooter built with a from-scratch raycast renderer." />
+  <title>Crimson Labyrinth</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <main>
-    <h1>Welcome to Your Static Site</h1>
+  <main class="game-shell" aria-label="Crimson Labyrinth game">
+    <section class="viewport-card" aria-label="Game viewport">
+      <canvas id="game" width="960" height="540" tabindex="0" aria-label="Playable retro 3D shooter"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <p class="eyebrow">Crimson Labyrinth</p>
+          <h1>Survive the reactor maze</h1>
+          <p>
+            An original retro FPS inspired by early 90s raycast shooters:
+            explore, collect keys, open sealed doors, and clear hostile drones.
+          </p>
+          <button id="startButton" type="button">Start mission</button>
+          <dl class="controls">
+            <div><dt>Move</dt><dd>W A S D or arrow keys</dd></div>
+            <div><dt>Aim</dt><dd>Mouse or left/right arrows</dd></div>
+            <div><dt>Fire</dt><dd>Space or click</dd></div>
+            <div><dt>Use</dt><dd>E opens doors and exits</dd></div>
+            <div><dt>Map</dt><dd>M toggles scanner</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <aside class="mission-card" aria-label="Mission information">
+      <p class="eyebrow">Mission brief</p>
+      <h2>Break the lockdown</h2>
+      <p>
+        Find the red access key, fight through the lab, and activate the exit
+        gate. This is a clean-room, original implementation with procedural
+        walls, sprites, weapons, pickups, HUD, minimap, enemy AI, and levels.
+      </p>
+      <ul>
+        <li>Raycast 3D renderer with floor and ceiling shading</li>
+        <li>Original maze, enemies, pickups, doors, and exit logic</li>
+        <li>Mouse-look, keyboard controls, damage, ammo, armor, and scoring</li>
+      </ul>
+    </aside>
   </main>
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
   <script src="assets/script.js"></script>
 </body>
 </html>
